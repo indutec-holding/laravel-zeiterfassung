@@ -32,28 +32,28 @@ class TimeCrudController extends CrudController
             'name' => 'personalnummer', // The db column name
             'label' => "Personalnummer", // Table column heading
             'type' => 'Text'
-            
+
           ]);
 
           $this->crud->addColumn([
             'name' => 'location', // The db column name
             'label' => "Einsatzort", // Table column heading
             'type' => 'Text'
-            
+
           ]);
 
           $this->crud->addColumn([
             'name' => 'start', // The db column name
             'label' => "Check-In", // Table column heading
             'type' => 'datetime'
-            
+
           ]);
 
           $this->crud->addColumn([
             'name' => 'end', // The db column name
             'label' => "Check-Out", // Table column heading
             'type' => 'datetime'
-            
+
           ]);
 
           $this->crud->addColumn([
@@ -68,7 +68,8 @@ class TimeCrudController extends CrudController
             'label' => 'Check-Out Foto', // Table column heading
             'type'  => 'image',
         ]);
-          
+
+        $this->crud->enableExportButtons();
     }
 
     protected function setupCreateOperation()

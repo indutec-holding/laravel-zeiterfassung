@@ -68,25 +68,25 @@ class EmployeeCrudController extends CrudController
     {
         $this->crud->setValidation(EmployeeRequest::class);
 
-        $this->crud->addField([   
+        $this->crud->addField([
             'name' => 'personalnummer',
             'type' => 'text',
             'label' => 'Personalnummer',
          ]);
 
-         $this->crud->addField([   
+         $this->crud->addField([
             'name' => 'vorname',
             'type' => 'text',
             'label' => 'Vorname',
          ]);
 
-         $this->crud->addField([   
+         $this->crud->addField([
             'name' => 'nachname',
             'type' => 'text',
             'label' => 'Nachname',
          ]);
 
-        $this->crud->addField([   
+        $this->crud->addField([
             'name' => 'geburtsdatum',
             'type' => 'date_picker',
             'label' => 'Geburtsdatum',
@@ -99,7 +99,7 @@ class EmployeeCrudController extends CrudController
          ]);
 
          $this->crud->addField([       // Select2Multiple = n-n relationship (with pivot table)
-            'label'             => 'Select2_multiple',
+            'label'             => 'Einsatzort(e)',
             'type'              => 'select2_multiple',
             'name'              => 'locations', // the method that defines the relationship in your Model
             'entity'            => 'locations', // the method that defines the relationship in your Model
@@ -109,7 +109,7 @@ class EmployeeCrudController extends CrudController
         ],);
 
 
-         
+
     }
 
     protected function setupUpdateOperation()
