@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Time;
 use App\Models\Employee;
-use App\Models\Location;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Builder;
 
@@ -17,9 +16,8 @@ class TimeController extends Controller
 
        // $employees = Location::with('employees')->where('name', 'Schwerte')->get();
 
-        $location = Location::where('name', 'Schwerte')->find(1);
+        $employees = Employee::where('einsatzort', 'Schwerte')->get();
 
-        $employees = $location->employees;
 
 
       // dd($location->employees);

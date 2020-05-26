@@ -23,10 +23,5 @@ class Employee extends Model
     // protected $hidden = [];
     // protected $dates = [];
 
-
-    public function locations()
-    {
-        return $this->belongsToMany(Location::class, 'location_employee');
-    }
 }
 

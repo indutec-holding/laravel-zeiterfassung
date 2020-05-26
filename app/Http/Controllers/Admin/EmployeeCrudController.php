@@ -50,14 +50,6 @@ class EmployeeCrudController extends CrudController
                 'label'    => 'Geburtsdatum',
                 'type'  =>  'text',
             ],
-            [   // select_multiple: n-n relationship (with pivot table)
-                'label'     => 'Standorte', // Table column heading
-                'type'      => 'select_multiple',
-                'name'      => 'locations', // the method that defines the relationship in your Model
-                'entity'    => 'locations', // the method that defines the relationship in your Model
-                'attribute' => 'name', // foreign key attribute that is shown to user
-                'model'     => "app\Models\Location", // foreign key model
-            ],
         ]);
 
 
@@ -98,15 +90,11 @@ class EmployeeCrudController extends CrudController
             ],
          ]);
 
-         $this->crud->addField([       // Select2Multiple = n-n relationship (with pivot table)
-            'label'             => 'Einsatzort(e)',
-            'type'              => 'select2_multiple',
-            'name'              => 'locations', // the method that defines the relationship in your Model
-            'entity'            => 'locations', // the method that defines the relationship in your Model
-            'attribute'         => 'name', // foreign key attribute that is shown to user
-            'model'             => "App\Models\Location", // foreign key model
-            'pivot'             => true, // on create&update, do you need to add/delete pivot table entries?
-        ],);
+        $this->crud->addField([
+            'name' => 'einsatzort',
+            'type' => 'text',
+            'label' => 'Einsatzort',
+        ]);
 
 
 

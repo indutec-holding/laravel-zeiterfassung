@@ -18,6 +18,7 @@ class CreateEmployeesTable extends Migration
             $table->string('vorname');
             $table->string('nachname');
             $table->string('geburtsdatum');
+            $table->string('einsatzort');
             $table->timestamps();
         });
     }
