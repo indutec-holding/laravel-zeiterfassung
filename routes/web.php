@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/schwerte', 'TimeController@index')->name('schwerte');
+Route::get('/', 'TimeController@index');
 
-Route::post('/schwerte', 'TimeController@store');
+Route::post('/', 'TimeController@store');

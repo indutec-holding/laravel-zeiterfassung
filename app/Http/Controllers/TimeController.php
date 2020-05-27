@@ -68,6 +68,6 @@ class TimeController extends Controller
 
 
 
-        return redirect('/schwerte');
+        return redirect('/');
     }
 }
